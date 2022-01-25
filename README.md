@@ -37,7 +37,7 @@ Note that all severity informations are correctly indicated on respectet devices
 
 ### Configuration of IBM Netcool Network Manager Generic CSV Collector
 
-Information how to configure collectors can be found on offical IBM documentation for [Generic CSV Collector](https://www.ibm.com/docs/en/networkmanager/4.2.0?topic=collectors-configuring-genericcsv-collector)
+Information on how to configure collectors can be found in offical IBM documentation for [Generic CSV Collector](https://www.ibm.com/docs/en/networkmanager/4.2.0?topic=collectors-configuring-genericcsv-collector)
 
 In this specific case Generic CSV collector configuration file (GenericCsvCollector.cfg) was set like:
 ```	
@@ -124,3 +124,23 @@ Basically we have described the running port of collector (8081) and additional 
 )
 ```
 This file defines names and delimiters of translated input files. Delimiter is set to '|' and files are _devices.csv, genericentities.csv,_ and _layer1Links.csv_
+
+Device.csv file should contain basic information about SDH and DWDM network equipment
+```	
+<ip_address>|1|<device_name> (ip_address)|1.3.6.1.4.1.2544.1.11.1||<device_name> (ip_address)|1|<region>
+<ip_address>|1|<device_name> (ip_address)|1.3.6.1.4.1.2544.1.11.1||<device_name> (ip_address)|1|<region>
+<ip_address>|1|<device_name> (ip_address)|1.3.6.1.4.1.2544.1.11.1||<device_name> (ip_address)|1|<region>
+<ip_address>|1|<device_name> (ip_address)|1.3.6.1.4.1.2544.1.11.1||<device_name> (ip_address)|1|<region>
+```
+genericentitites.csv file should contain modules that are present in device. I have randomized part numbers of devices, just in case.
+```
+<device_name> (ip_address)|FCU-1|6|FAN/Plug-In|SHELF-1|1|4.01|n/a|152.0.0|FA7232423434|Free
+<device_name> (ip_address)|FCU-2|6|FAN/Plug-In|SHELF-2|17|4.01|n/a|152.0.0|FA73214321432445|Free
+<device_name> (ip_address)|MOD-1-12|8|Slot 12-AGFB-8-B20-DAC-BC|SHELF-1|9|2.01|n/a|162.1.2|FA321321321|Assigned
+```
+And layer1Links.csv should contain links between devices.
+```
+<device_name> (ip_address)|OL-1|<device_name> (ip_address)|OL-2|1
+<device_name> (ip_address)|OL-2|<device_name> (ip_address)|OL-1|1
+<device_name> (ip_address)|OL-2|<device_name> (ip_address)|OL-3|1
+```
