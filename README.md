@@ -23,9 +23,15 @@ Topology CSV reports provides connections from Node and Port A, to Node and Port
 	
 These two files are used as data info for population of Network Manager Topology database
 	
-## View of Adva topology and Adva device in IBM Netcool Network Manager View
+### View of Adva topology and Adva device in IBM Netcool Network Manager View
+
+End product of Adva topology integration in IBM Netcool Network Manager Network View should look smilar to this:	
 	
-![alt text](https://github.com/Nabiguzoje/Netcool-Network-Manager-integration-with-ADVA-NMS-and-Coriant-TNMS/blob/[branch]/image.jpg?raw=true)
+![Adva Toplogy](https://github.com/Nabiguzoje/Netcool-Network-Manager-integration-with-ADVA-NMS-and-Coriant-TNMS/blob/main/adva_topology.png?raw=true)
+
+And hardware inventory of one of the devices in IBM Netcool Network Manager Device View should look something like this:
+	
+![Adva Toplogy](https://github.com/Nabiguzoje/Netcool-Network-Manager-integration-with-ADVA-NMS-and-Coriant-TNMS/blob/main/adva_topology.png?raw=true)
 
 																																													
 
