@@ -170,3 +170,7 @@ And hardware inventory of one of the Coriant devices in IBM Netcool Network Mana
 ![Adva Toplogy](https://github.com/Nabiguzoje/Netcool-Network-Manager-integration-with-ADVA-NMS-and-Coriant-TNMS/blob/main/coriant.png?raw=true)
 
 Note that all severity informations are correctly indicated on respectet devices.
+
+### Parsing of Coriant data to Generic CSV Collector format
+
+Script [adva.pl](https://github.com/Nabiguzoje/Netcool-Network-Manager-integration-with-ADVA-NMS-and-Coriant-TNMS/blob/main/coriant.pl) is used for translating one csv format data into other csv format data. Output of the script are appedned to the three previously generated files as described previously.
