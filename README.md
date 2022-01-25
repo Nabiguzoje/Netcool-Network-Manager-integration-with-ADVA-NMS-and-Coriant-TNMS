@@ -29,7 +29,7 @@ End product of Adva topology integration in IBM Netcool Network Manager Network 
 	
 ![Adva Toplogy](https://github.com/Nabiguzoje/Netcool-Network-Manager-integration-with-ADVA-NMS-and-Coriant-TNMS/blob/main/adva_topology.png?raw=true)
 
-And hardware inventory of one of the devices in IBM Netcool Network Manager Device View should look something like this:
+And hardware inventory of one of the Adva devices in IBM Netcool Network Manager Device View should look something like this:
 	
 ![Adva Toplogy](https://github.com/Nabiguzoje/Netcool-Network-Manager-integration-with-ADVA-NMS-and-Coriant-TNMS/blob/main/adva_device.png?raw=true)
 
@@ -157,4 +157,16 @@ snmptable -v 2c -c public -Cf ";" -Oa -m /opt/IBM/netcool/mibs/TNMS-NBI-MIB.mib 
 snmptable -v 2c -c public -Cf ";" -Oa -m /opt/IBM/netcool/mibs/TNMS-NBI-MIB.mib <ip_address> .1.3.6.1.4.1.42229.6.22.1.3 > /opt/IBM/netcool/core/precision/collectors/perlCollectors/Csv/DataFiles/enmsPortTable.csv;
 snmptable -v 2c -c public -Cf ";" -Oa  -m /opt/IBM/netcool/mibs/TNMS-NBI-MIB.mib <ip_address> .1.3.6.1.4.1.42229.6.22.1.5 > /opt/IBM/netcool/core/precision/collectors/perlCollectors/Csv/DataFiles/enmsPortConnTable.csv;
 ```
+In a same manner as with ADVA relevant data is translated via perl script into Generic CSV Collector readable format. Format of these tables can be found in relevant Coriant documentation so format of tables wont be described as part of this document.
+	
+###View of Coriant topology and Coraint device in IBM Netcool Network Manager View
 
+End product of Coraint topology integration in IBM Netcool Network Manager Network View should look smilar to this:	
+	
+![Adva Toplogy](https://github.com/Nabiguzoje/Netcool-Network-Manager-integration-with-ADVA-NMS-and-Coriant-TNMS/blob/main/adva_topology.png?raw=true)
+
+And hardware inventory of one of the Coriant devices in IBM Netcool Network Manager Device View should look something like this:
+	
+![Adva Toplogy](https://github.com/Nabiguzoje/Netcool-Network-Manager-integration-with-ADVA-NMS-and-Coriant-TNMS/blob/main/adva_device.png?raw=true)
+
+Note that all severity informations are correctly indicated on respectet devices.
