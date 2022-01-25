@@ -33,5 +33,5 @@ And hardware inventory of one of the devices in IBM Netcool Network Manager Devi
 	
 ![Adva Toplogy](https://github.com/Nabiguzoje/Netcool-Network-Manager-integration-with-ADVA-NMS-and-Coriant-TNMS/blob/main/adva_device.png?raw=true)
 
-																																													
+Note that all severity informations are correctly indicated on respectet devices.																																									
 
