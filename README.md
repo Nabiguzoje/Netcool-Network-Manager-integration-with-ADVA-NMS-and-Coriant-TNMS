@@ -25,6 +25,6 @@ These two files are used as data info for population of Network Manager Topology
 	
 ## View of Adva topology and Adva device in IBM Netcool Network Manager View
 	
-/assets/images/adva_topology.png
+!(/adva_topology.png)
 																																													
 
