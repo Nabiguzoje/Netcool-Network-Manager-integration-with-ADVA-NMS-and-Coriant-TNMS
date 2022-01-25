@@ -33,5 +33,94 @@ And hardware inventory of one of the devices in IBM Netcool Network Manager Devi
 	
 ![Adva Toplogy](https://github.com/Nabiguzoje/Netcool-Network-Manager-integration-with-ADVA-NMS-and-Coriant-TNMS/blob/main/adva_device.png?raw=true)
 
-Note that all severity informations are correctly indicated on respectet devices.																																									
+Note that all severity informations are correctly indicated on respectet devices.
 
+### Configuration of IBM Netcool Network Manager Generic CSV Collector
+
+Information how to configure collectors can be found on offical IBM documentation for [Generic CSV Collector](https://www.ibm.com/docs/en/networkmanager/4.2.0?topic=collectors-configuring-genericcsv-collector)
+
+In this specific case Generic CSV collector configuration file (GenericCsvCollector.cfg) was set like:
+```	
+(
+    General =>
+    {
+        Debug => 0,
+        Listen => 8081,
+        QueueSize => 40
+    },
+
+    DataSource =>
+    {
+        CsvCfg => '/opt/IBM/netcool/core/precision/collectors/perlCollectors/CSV/GenericCsv.cfg',
+
+        SourceInfo =>
+        {
+            Id => 1,
+            Descr => 'Primary Data Source',
+            # EmsHost => '',
+            # EmsName => '',
+            # EmsVersion => '',
+            # EmsIdentifier => '',
+            # EmsRole => '',
+            # EmsStatus => '',
+        },
+
+        DataAcquisition =>
+        {
+            GetEntities => 1,
+            GetLayer2Vpns => 0,
+            GetLayer3Vpns => 0,
+            GetLayer1Connections => 1,
+            GetLayer2Connections => 0,
+            GetLayer3Connections => 0,
+            GetMplsInterfaces => 0
+        }
+    }
+)
+```	
+Basically we have described the running port of collector (8081) and additional configuration file for parsing (GenericCsv.cfg). Parsing file is set like this:
+```	
+(
+    system => {
+        logfile => '/opt/IBM/netcool/core/precision/collectors/perlCollectors/CSV/genericCsv.log',
+		verbose => 1,
+		logging => 1 
+	},
+
+    driver => {
+		file => '/opt/IBM/netcool/core/precision/collectors/perlCollectors/CSV/genericCsv.drv'
+	},
+
+
+  file => {
+
+        MainEntityData      => '/opt/IBM/netcool/core/precision/collectors/perlCollectors/CSV/CsvData/devices.csv',
+        GenericEntityData   => '/opt/IBM/netcool/core/precision/collectors/perlCollectors/CSV/CsvData/genericentities.csv',
+ 
+        L1ConnectivityData  => '/opt/IBM/netcool/core/precision/collectors/perlCollectors/CSV/CsvData/layer1Links.csv',
+
+    },
+ lineMatch => {
+
+        MainEntityData      => '.*',
+        InterfaceData       => '.*',
+    }
+ delimeter => {
+
+        MainEntityData      => '|',
+        InterfaceData       => '|',
+        EntityData          => '|',
+        GenericEntityData   => '|',
+        L3ConnectivityData  => '|',
+        L2ConnectivityData  => '|',
+        L1ConnectivityData  => '|',
+        MicrowaveConnectivityData  => '|',
+        L3VpnData           => '|',
+        L3VpnInterfaceData  => '|',
+        L3VpnRTData         => '|',
+        L2VpnData           => '|',
+        MplsInterfaceData   => '|', 
+    }
+)
+```
+This file defines names and delimiters of translated input files. Delimiter is set to '|' and files are _devices.csv, genericentities.csv,_ and _layer1Links.csv_
