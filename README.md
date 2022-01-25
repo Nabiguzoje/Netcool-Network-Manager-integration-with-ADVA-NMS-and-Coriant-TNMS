@@ -31,7 +31,7 @@ End product of Adva topology integration in IBM Netcool Network Manager Network 
 
 And hardware inventory of one of the devices in IBM Netcool Network Manager Device View should look something like this:
 	
-![Adva Toplogy](https://github.com/Nabiguzoje/Netcool-Network-Manager-integration-with-ADVA-NMS-and-Coriant-TNMS/blob/main/adva_topology.png?raw=true)
+![Adva Toplogy](https://github.com/Nabiguzoje/Netcool-Network-Manager-integration-with-ADVA-NMS-and-Coriant-TNMS/blob/main/adva_device.png?raw=true)
 
 																																													
 
