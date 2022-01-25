@@ -150,5 +150,11 @@ Script [adva.pl](https://github.com/Nabiguzoje/Netcool-Network-Manager-integrati
 	
 ## Coriant TNMS integration
 
-Coriant TNMS enables SNMP collection of required data. Via _snmpgettable_ command is possible to get relevant information about inventory and topology of Coriant equpment. 
+Coriant TNMS enables SNMP collection of required data. Via _snmptable_ command is possible to get relevant information about inventory and topology of Coriant equipment. All relevant information about Coriant equipment are collected via following commands:
+```
+snmptable -v 2c -c public -Cf ";" -Oa -m /opt/IBM/netcool/mibs/TNMS-NBI-MIB.mib <ip_address> .1.3.6.1.4.1.42229.6.22.1.1 > /opt/IBM/netcool/core/precision/collectors/perlCollectors/Csv/DataFiles/enmsNETable.csv;
+snmptable -v 2c -c public -Cf ";" -Oa -m /opt/IBM/netcool/mibs/TNMS-NBI-MIB.mib <ip_address> .1.3.6.1.4.1.42229.6.22.1.2 > /opt/IBM/netcool/core/precision/collectors/perlCollectors/Csv/DataFiles/enmsModuleTable.csv;
+snmptable -v 2c -c public -Cf ";" -Oa -m /opt/IBM/netcool/mibs/TNMS-NBI-MIB.mib <ip_address> .1.3.6.1.4.1.42229.6.22.1.3 > /opt/IBM/netcool/core/precision/collectors/perlCollectors/Csv/DataFiles/enmsPortTable.csv;
+snmptable -v 2c -c public -Cf ";" -Oa  -m /opt/IBM/netcool/mibs/TNMS-NBI-MIB.mib <ip_address> .1.3.6.1.4.1.42229.6.22.1.5 > /opt/IBM/netcool/core/precision/collectors/perlCollectors/Csv/DataFiles/enmsPortConnTable.csv;
+```
 
