@@ -144,3 +144,7 @@ And layer1Links.csv should contain links between devices.
 <device_name> (ip_address)|OL-2|<device_name> (ip_address)|OL-1|1
 <device_name> (ip_address)|OL-2|<device_name> (ip_address)|OL-3|1
 ```
+### Parsing of ADVA FSP data to Generic CSV Collector format
+
+Scrit _adva.pl_ is used for translating one csv format data into other csv format data. All comments in this script are written in Croatian language, if required it can be alterd to English languague. Plus script is pretty much raw so that operators can run them blindy. 
+[adva.pl](https://github.com/Nabiguzoje/Netcool-Network-Manager-integration-with-ADVA-NMS-and-Coriant-TNMS/blob/main/adva.pl)
