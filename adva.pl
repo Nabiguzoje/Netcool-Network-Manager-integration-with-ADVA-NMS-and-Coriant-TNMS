@@ -1,4 +1,13 @@
 #!/usr/bin/perl
+###########################################################################################################################
+#
+#  Creating files for IBM Network Manager perlCollector from SNMP Tables
+#
+#
+#  Author: Mislav Kasalo 
+#  Email: mislav.kasalo@gmail.com
+#
+######################################
 use strict;
 use warnings;
     
