@@ -146,5 +146,9 @@ And layer1Links.csv should contain links between devices.
 ```
 ### Parsing of ADVA FSP data to Generic CSV Collector format
 
-Scrit [adva.pl](https://github.com/Nabiguzoje/Netcool-Network-Manager-integration-with-ADVA-NMS-and-Coriant-TNMS/blob/main/adva.pl) is used for translating one csv format data into other csv format data. All comments in this script are written in Croatian language, if required it can be alterd to English languague. Plus script is pretty much raw so that operators can run them blindy. 
+Script [adva.pl](https://github.com/Nabiguzoje/Netcool-Network-Manager-integration-with-ADVA-NMS-and-Coriant-TNMS/blob/main/adva.pl) is used for translating one csv format data into other csv format data. All comments in this script are written in Croatian language, if required it can be alterd to English languague. Plus script is pretty much raw so that operators can run them blindy. Output of the script are three files as required by Generic CSV Collector.
+	
+## Coriant TNMS integration
+
+Coriant TNMS enables SNMP collection of required data. Via _snmpgettable_ command is possible to get relevant information about inventory and topology of Coriant equpment. 
 
