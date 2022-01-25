@@ -25,6 +25,7 @@ These two files are used as data info for population of Network Manager Topology
 	
 ## View of Adva topology and Adva device in IBM Netcool Network Manager View
 	
-!(/adva_topology.png)
+![alt text](https://github.com/Nabiguzoje/Netcool-Network-Manager-integration-with-ADVA-NMS-and-Coriant-TNMS/blob/[branch]/image.jpg?raw=true)
+
 																																													
 
