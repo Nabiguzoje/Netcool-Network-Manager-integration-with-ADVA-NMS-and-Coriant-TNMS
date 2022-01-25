@@ -163,10 +163,10 @@ In a same manner as with ADVA relevant data is translated via perl script into G
 
 End product of Coraint topology integration in IBM Netcool Network Manager Network View should look smilar to this:	
 	
-![Adva Toplogy](https://github.com/Nabiguzoje/Netcool-Network-Manager-integration-with-ADVA-NMS-and-Coriant-TNMS/blob/main/adva_topology.png?raw=true)
+![Adva Toplogy](https://github.com/Nabiguzoje/Netcool-Network-Manager-integration-with-ADVA-NMS-and-Coriant-TNMS/blob/main/coriant_topology.png?raw=true)
 
 And hardware inventory of one of the Coriant devices in IBM Netcool Network Manager Device View should look something like this:
 	
-![Adva Toplogy](https://github.com/Nabiguzoje/Netcool-Network-Manager-integration-with-ADVA-NMS-and-Coriant-TNMS/blob/main/adva_device.png?raw=true)
+![Adva Toplogy](https://github.com/Nabiguzoje/Netcool-Network-Manager-integration-with-ADVA-NMS-and-Coriant-TNMS/blob/main/coriant.png?raw=true)
 
 Note that all severity informations are correctly indicated on respectet devices.
